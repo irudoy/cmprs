@@ -1,83 +1,137 @@
+<!DOCTYPE html>
+<html>
 <head>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+  <style>
+  body {
+    background-color: #e0e0e0;
+    font-family: Helvetica, sans-serif;
+  }
+  .container {
+    width: 50%;
+    margin: auto;
+  }
+  .container > .panel {
+    padding: 15px;
+    margin: 10px auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px #c8c8c8;
+  }
+  .panel {
+    text-align: center;
+  }
+  .panel > .panel-header {
+    color: white;
+    font-weight: bold;
+  }
+  .panel-body > table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 5px;
+    border-bottom: 1px solid #dddddd;
+  }
+  tr:nth-of-type(even) {
+    background-color: #e8e8e8;
+  }
+  .bigger > .panel-header {
+    background-color: rgba(225, 25, 25, .7);
+  }
+  .smaller > .panel-header {
+    background-color: rgba(25, 150, 25, .7);
+  }
+  .same > .panel-header {
+    background-color: rgba(25, 25, 150, .7);
+  }
+  .removed > .panel-header {
+    background-color: rgba(25, 25, 150, .7);
+  }
+  .added > .panel-header {
+    background-color: rgba(25, 25, 150, .7);
+  }
+  </style>
 </head>
-
 <body>
-    <div class='container'>
-        <div class='panel bigger'>
-            <div class='panel-header'>Larger Bundles</div>
-            <div class='panel-body'>
-                <table>
-                    <tr class='table-header'>
-                        <th>Asset</th>
-                        <th>Old</th>
-                        <th>New</th>
-                        <th>Diff</th>
-                        <th>% Diff</th>
-                    </tr>
-                    <%= bigger %>
-                </table>
-            </div>
-        </div>
-        <div class='panel smaller'>
-            <div class='panel-header'>Smaller Bundles</div>
-            <div class='panel-body'>
-                <table>
-                    <tr class='table-header'>
-                        <th>Asset</th>
-                        <th>Old</th>
-                        <th>New</th>
-                        <th>Diff</th>
-                        <th>% Diff</th>
-                    </tr>
-                    <%= smaller %>
-                </table>
-            </div>
-        </div>
-        <div class='panel removed'>
-            <div class='panel-header'>Removed Bundles</div>
-            <div class='panel-body'>
-                <table>
-                    <tr class='table-header'>
-                        <th>Asset</th>
-                        <th>Old</th>
-                        <th>New</th>
-                        <th>Diff</th>
-                        <th>% Diff</th>
-                    </tr>
-                    <%= onlyOld %>
-                </table>
-            </div>
-        </div>
-        <div class='panel added'>
-            <div class='panel-header'>Added Bundles</div>
-            <div class='panel-body'>
-                <table>
-                    <tr class='table-header'>
-                        <th>Asset</th>
-                        <th>Old</th>
-                        <th>New</th>
-                        <th>Diff</th>
-                        <th>% Diff</th>
-                    </tr>
-                    <%= onlyNew %>
-                </table>
-            </div>
-        </div>
-        <div class='panel same'>
-            <div class='panel-header'>Same-Sized Bundles</div>
-            <div class='panel-body'>
-                <table>
-                    <tr class='table-header'>
-                        <th>Asset</th>
-                        <th>Old</th>
-                        <th>New</th>
-                        <th>Diff</th>
-                        <th>% Diff</th>
-                    </tr>
-                    <%= same %>
-                </table>
-            </div>
-        </div>
+  <div class='container'>
+    <div class='panel bigger'>
+      <div class='panel-header'>Larger Bundles</div>
+      <div class='panel-body'>
+        <table>
+          <tr class='table-header'>
+            <th>Asset</th>
+            <th>Old</th>
+            <th>New</th>
+            <th>Diff</th>
+            <th>% Diff</th>
+          </tr>
+          ${bigger}
+        </table>
+      </div>
     </div>
+    <div class='panel smaller'>
+      <div class='panel-header'>Smaller Bundles</div>
+      <div class='panel-body'>
+        <table>
+          <tr class='table-header'>
+            <th>Asset</th>
+            <th>Old</th>
+            <th>New</th>
+            <th>Diff</th>
+            <th>% Diff</th>
+          </tr>
+          ${smaller}
+        </table>
+      </div>
+    </div>
+    <div class='panel removed'>
+      <div class='panel-header'>Removed Bundles</div>
+      <div class='panel-body'>
+        <table>
+          <tr class='table-header'>
+            <th>Asset</th>
+            <th>Old</th>
+            <th>New</th>
+            <th>Diff</th>
+            <th>% Diff</th>
+          </tr>
+          ${onlyOld}
+        </table>
+      </div>
+    </div>
+    <div class='panel added'>
+      <div class='panel-header'>Added Bundles</div>
+      <div class='panel-body'>
+        <table>
+          <tr class='table-header'>
+            <th>Asset</th>
+            <th>Old</th>
+            <th>New</th>
+            <th>Diff</th>
+            <th>% Diff</th>
+          </tr>
+          ${onlyNew}
+        </table>
+      </div>
+    </div>
+    <div class='panel same'>
+      <div class='panel-header'>Same-Sized Bundles</div>
+      <div class='panel-body'>
+        <table>
+          <tr class='table-header'>
+            <th>Asset</th>
+            <th>Old</th>
+            <th>New</th>
+            <th>Diff</th>
+            <th>% Diff</th>
+          </tr>
+          ${same}
+        </table>
+      </div>
+    </div>
+  </div>
 </body>
+</html>

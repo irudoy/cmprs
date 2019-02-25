@@ -1,7 +1,9 @@
 # Webpack Compare
 
+Fork of https://github.com/Southpaw17/webpack-compare
+
 ## Install
-`npm i -g webpack-compare`
+`npm install webpack-compare`
 
 ## Introduction
 Ever wonder if a change you made, either to your build configuration or source, had a positive impact on the size of your Webpack bundles?  `webpack-compare` aims to provide an easy-to-read comparison between a previous build and your latest build.  Just use the StatsWriterPlugin to collect some info about your build and pass the stats.json into webpack-compare to see how your bundle sizes have changed over time.

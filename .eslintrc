@@ -1,0 +1,10 @@
+{
+    "extends": "airbnb",
+    "rules": {
+      "semi": "off",
+      "max-len": ["error", 120],
+      "no-console": "off",
+      "global-require": "off",
+      "import/no-dynamic-require": "off"
+    }
+}
