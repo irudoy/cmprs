@@ -1,6 +1,6 @@
 {
   "name": "cmprs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Compares file sizes between two stats.json objects",
   "main": "index.js",
   "bin": {

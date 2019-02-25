@@ -75,9 +75,15 @@ program
 
         const oldSize = oldAsset && oldAsset.size / 1024;
         const newSize = newAsset && newAsset.size / 1024;
-        const diff = (newSize - oldSize) / 1024;
+        const diff = newSize - oldSize;
         const pdiff = (1 - (newSize / oldSize)) * -100;
-        const asset = { oldSize, newSize };
+
+        const asset = {
+          oldSize,
+          newSize,
+          diff,
+          pdiff,
+        };
 
         if (Math.abs(pdiff) < 5) {
           same[key] = asset
